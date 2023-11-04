@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-size: 62.5%;
+    font-family: 'Raleway', sans-serif;
+  }
+  body{
+    background-color: #b2e0df;
+    overflow: hidden;
+   
+}
+
+/* header */
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+    font-size: 4rem;
+    
+}
+  /* search Field */
+
+  .search{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 5rem;
+    
+  }
+.search-container{
+    background: #fff;
+    height: 4rem;
+    border-radius: 3rem;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+.search-container:hover > .search-input{
+    width: 40rem;
+}
+
+.search-container .search-input{
+    background: transparent;
+    border: none;
+    outline:none;
+    width: 0px;
+    font-weight: 500;
+    font-size: 1.6rem;
+    transition: 0.8s;
+
+}
+
+.search-container .search-btn .fas{
+    color: #5cbdbb;
+}
+
+@keyframes hoverShake {
+  0% {transform: skew(0deg,0deg);}
+  25% {transform: skew(5deg, 5deg);}
+  75% {transform: skew(-5deg, -5deg);}
+  100% {transform: skew(0deg,0deg);}
+}
+
+.search-container:hover{
+  animation: hoverShake 0.15s linear 3;
+}
+
+  /* main section */
+
+  .main{
+    height: 80vh;
+    width: 100%;
+    padding: 4rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    transform: translate(-100%);
+    transition: transform ease-in-out 0.6s;
+  }
+
+  .img-data {
+    width: 40%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    
+  }
+  .img-data .title{
+    position: absolute;
+    font-size: 7rem;
+    color:whitesmoke;
+    background-color: transparent;
+    width: 100%;
+    height: 5rem;
+    top: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+  }
+  .recipe i{
+    padding: 2rem 1rem;
+    font-size: 2.3rem;
+  }
+  
+  .info-data{
+    width: 57%;
+    height: 100%;
+    color: #303040;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar{
+    display: none;
+  }
+  
+
+  ul{
+    font-size: 3rem;
+    position: relative;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 2rem 3rem;
+    padding: 3.2rem 2rem 3rem 7rem;
+    text-transform: capitalize;
+
+  }
+  .recipe{
+    padding: 5rem 5rem;
+  }
+  p{
+    font-size: 2rem;
+  }
+  a{
+    text-decoration: none;
+    color: #303040;
+  }
+
+  /* media query for medium size devices */
+@media screen and  (max-width: 950px){
+  .main{
+    flex-direction: column;
+    padding: 1rem 2rem;
+    height: 100vh;
+  }
+  .img-data{
+    width: 100%;
+    height: 40%;
+    padding: 2rem;
+    object-fit: contain;
+  }
+  .info-data{
+    width: 100%;
+    height: 100%;
+  }
+  ul{
+    padding: 2rem 0;
+  }
+  .title{
+    display: inline-block;
+  }
+
+
+}
+
+
+
+/* media query for small Devices */
+@media screen and (max-width: 767px) {
+  :root {
+    font-size: 50%;
+  }
+}
